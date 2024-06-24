@@ -17,9 +17,13 @@ public class Player extends ImageView {
 //        for (int i = 0; i < 3; i++) {
 ////            sprintFrames[i] = new Image("sprint" + i + ".jpg");
 ////        }
+
         defaultImage = new Image("com/example/tamagotchi/default_cat.jpg");
         currentFrame = 0;
         setImage(defaultImage);
+        setFitWidth(100);  // Set desired width
+        setFitHeight(100); // Set desired height
+        setPreserveRatio(true); // Preserve aspect ratio
     }
 
     public void sprint() {
