@@ -7,7 +7,6 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
 public class Player extends ImageView {
-    private int currentState;
     private int currentFrame;
     private Image[] sprintFrames;
     private Image defaultImage;
@@ -15,29 +14,34 @@ public class Player extends ImageView {
     public Player() {
         sprintFrames = new Image[3];
 //        for (int i = 0; i < 3; i++) {
-////            sprintFrames[i] = new Image("sprint" + i + ".jpg");
-////        }
-
-        defaultImage = new Image("com/example/tamagotchi/default_cat.jpg");
+//            sprintFrames[i] = loadImage("com/example/tamagotchi/sprint" + i + ".jpg");
+//        }
+        defaultImage = loadImage("com/example/tamagotchi/default_cat.jpg");
         currentFrame = 0;
         setImage(defaultImage);
-        setFitWidth(500);  // Set desired width
-        setFitHeight(500); // Set desired height
+        setFitWidth(100);  // Set desired width
+        setFitHeight(100); // Set desired height
         setPreserveRatio(true); // Preserve aspect ratio
     }
 
-    public void sprint() {
+    private void sprint() {
         currentFrame = (currentFrame + 1) % sprintFrames.length;
         setImage(sprintFrames[currentFrame]);
     }
 
     public void feed() {
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
-            sprint();
-        }));
-        timeline.setCycleCount(3);
-        timeline.setOnFinished(event -> setImage(defaultImage));
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1.0), event -> sprint()));
+        timeline.setCycleCount(3); // Three sprints
+        timeline.setOnFinished(event -> setImage(defaultImage)); // Return to default image after 3 sprints
         timeline.play();
+    }
+
+    private Image loadImage(String path) {
+        var resource = getClass().getResource("/" + path);
+        if (resource == null) {
+            throw new IllegalArgumentException("Invalid URL or resource not found: " + path);
+        }
+        return new Image(resource.toString());
     }
 
     public Image getDefaultImage() {
