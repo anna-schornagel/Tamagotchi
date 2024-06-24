@@ -21,8 +21,8 @@ public class Player extends ImageView {
         defaultImage = new Image("com/example/tamagotchi/default_cat.jpg");
         currentFrame = 0;
         setImage(defaultImage);
-        setFitWidth(100);  // Set desired width
-        setFitHeight(100); // Set desired height
+        setFitWidth(500);  // Set desired width
+        setFitHeight(500); // Set desired height
         setPreserveRatio(true); // Preserve aspect ratio
     }
 
@@ -38,5 +38,9 @@ public class Player extends ImageView {
         timeline.setCycleCount(3);
         timeline.setOnFinished(event -> setImage(defaultImage));
         timeline.play();
+    }
+
+    public Image getDefaultImage() {
+        return defaultImage;
     }
 }

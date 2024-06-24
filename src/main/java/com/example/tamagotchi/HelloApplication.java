@@ -10,12 +10,12 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage primaryStage) {
         Player player = new Player();
-        player.setX(100);
-        player.setY(100);
+//        player.setX(100);
+//        player.setY(100);
 
         Button feedButton = new Button("Feed");
-        feedButton.setLayoutX(50);
-        feedButton.setLayoutY(400);
+//        feedButton.setLayoutX(50);
+//        feedButton.setLayoutY(400);
         feedButton.setOnAction(event -> player.feed());
 
         Pane root = new Pane(player, feedButton);
