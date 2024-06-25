@@ -1,8 +1,8 @@
 .background {
     -fx-background-color: linear-gradient(
             from 0% 0% to 100% 100%,
-            #f4b8ff,
-            #82588a
+            #f9dcff,
+            #9b69a4
     );
     -fx-background-insets: 0, 1, 2, 3;
     -fx-background-radius: 3;
@@ -23,9 +23,9 @@
 
 .button:hover {
     -fx-background-color:
-            linear-gradient(from 0% 0% to 0% 100%, #fbc02d, #ffeb3b),
-            linear-gradient(from 0% 0% to 100% 100%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
-    -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.61), 10, 0.0, -2, -2); /* Inset shadow to simulate press */
+            linear-gradient(from 0% 0% to 0% 100%, #e8ae20, #ffe700),
+            linear-gradient(from 0% 0% to 100% 100%, rgb(248, 242, 201), rgba(255, 255, 255, 0.2));
+    -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.71), 10, 0.0, -2, -2); /* Inset shadow to simulate press */
     -fx-background-radius: 15; /* Rounded edges */
     -fx-border-radius: 15; /* Rounded border */
     -fx-padding: 6 11; /* Slightly increase padding to simulate press */
