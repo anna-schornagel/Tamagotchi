@@ -3,18 +3,25 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.ImageView?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.tamagotchi.HelloController">
+<VBox alignment="CENTER" spacing="18.0" minHeight="230" minWidth="180" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.tamagotchi.HelloController" stylesheets="@style.css"
+      styleClass="background">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
     <!-- Player ImageView -->
-    <ImageView fx:id="player" fitWidth="100" fitHeight="100" preserveRatio="true"/>
+    <ImageView fx:id="player" fitWidth="100" fitHeight="100" preserveRatio="true" styleClass="image-effect"/>
+    <HBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml">
+    <Button text="  " onAction="#handleFeedButtonAction" styleClass="button" />
+    <Button text="  " onAction="#handleFeedButtonAction" styleClass="button" />
+    <Button text="  " onAction="#handleFeedButtonAction" styleClass="button" />
 
+
+    </HBox>
     <!-- Feed Button -->
-    <Button text="Feed" onAction="#handleFeedButtonAction"/>
 </VBox>

@@ -12,8 +12,8 @@ public class HelloController {
     public void initialize() {
         Player playerInstance = new Player();
         player.setImage(playerInstance.getDefaultImage());
-        player.setFitWidth(playerInstance.getFitWidth());
-        player.setFitHeight(playerInstance.getFitHeight());
+        player.setFitWidth(150);
+        player.setFitHeight(150);
         player.setPreserveRatio(true);
     }
 

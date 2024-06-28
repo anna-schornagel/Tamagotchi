@@ -1,0 +1,56 @@
+.background {
+    -fx-background-color: linear-gradient(
+            from 0% 0% to 100% 100%,
+            #f9dcff,
+            #a98daf
+    );
+    -fx-background-insets: 0, 1, 2, 3;
+    -fx-background-radius: 3;
+    -fx-padding: 10;
+    -fx-border-radius: 10;
+    -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.75), 10, 0.0, 0, 0); /* Inner shadow for balanced visibility */
+}
+
+.button {
+    -fx-background-color:
+            linear-gradient(from 0% 0% to 0% 100%, #eee38c, #e0bf6e),
+            linear-gradient(from 0% 0% to 100% 100%, rgb(255, 247, 156), rgba(255, 255, 255, 0.2));
+    -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.61), 10, 0.0, -2, -2); /* Inset shadow to simulate press */
+    -fx-background-radius: 15; /* Rounded edges */
+    -fx-border-radius: 15; /* Rounded border */
+    -fx-padding: 6 11; /* Slightly increase padding to simulate press */
+}
+
+.button:hover {
+    -fx-background-color:
+            linear-gradient(from 0% 0% to 0% 100%, #c5a861, #d7ca68),
+            linear-gradient(from 0% 0% to 100% 100%, rgb(250, 242, 157), rgba(255, 255, 255, 0.2));
+    -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.71), 10, 0.0, -2, -2); /* Inset shadow to simulate press */
+    -fx-background-radius: 15; /* Rounded edges */
+    -fx-border-radius: 15; /* Rounded border */
+    -fx-padding: 6 11; /* Slightly increase padding to simulate press */
+}
+
+.image-effect {
+        -fx-effect: innershadow( three-pass-box , rgba(0, 0, 0, 0.4), 5, 0.0 , 3, 3 );
+}
+/*.background {*/
+/*    -fx-background-color: linear-gradient(*/
+/*            from 0% 0% to 100% 100%,*/
+/*            #f4b8ff,*/
+/*            #82588a*/
+/*    );*/
+/*    -fx-effect: innershadow( three-pass-box , rgba(255, 255, 255, 0.7), 5, 0.0 , 3, 3 );*/
+/*}*/
+
+/*.background {*/
+/*    -fx-background-color: rgba(255,255,255,0.75),*/
+/*    linear-gradient(to bottom,#aaaaaa 0%,#cccccc 100%);*/
+/*    -fx-background-insets: 0,1;*/
+/*    -fx-padding: 7px;*/
+/*    -fx-background-radius: 3px;*/
+/*    -fx-border-radius: 3px;*/
+/*    -fx-effect: innershadow(three-pass-box, rgb(255, 255, 255),1,0,1,1);*/
+/*    -fx-font: 14px "Arial";*/
+
+/*}*/
