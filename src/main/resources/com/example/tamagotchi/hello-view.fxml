@@ -19,6 +19,5 @@
     <Button text="  " onAction="#handleFeedButtonAction" styleClass="button" />
     <Button text="  " onAction="#handleFeedButtonAction" styleClass="button" />
     <Button text="  " onAction="#handleFeedButtonAction" styleClass="button" />
-
     </HBox>
 </VBox>

@@ -17,7 +17,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(root);
 
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Sprite Animation");
+//        primaryStage.setTitle("Sprite Animation");
         primaryStage.show();
     }
 

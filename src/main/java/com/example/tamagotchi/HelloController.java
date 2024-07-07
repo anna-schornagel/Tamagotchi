@@ -48,8 +48,6 @@ public class HelloController {
         KeyFrame keyFrame7 = new KeyFrame(Duration.seconds(6), e -> cat.setImage(sprite7));
         KeyFrame keyFrame8 = new KeyFrame(Duration.seconds(7), e -> cat.setImage(sprite0));
 
-
-
         timeline.getKeyFrames().addAll(keyFrame1, keyFrame2, keyFrame3, keyFrame4, keyFrame5, keyFrame6, keyFrame7, keyFrame8);
 
         timeline.play();
